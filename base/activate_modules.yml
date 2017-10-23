@@ -8,6 +8,6 @@
 - hosts: all
   connection: local
   roles:
-    - role: activate_modules
+    - role: base/activate_modules
       tags: activate_modules
       

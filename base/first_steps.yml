@@ -7,5 +7,5 @@
 - hosts: all
   connection: local
   roles:
-    - role: first_steps
+    - role: base/first_steps
       tags: first_steps

@@ -17,5 +17,5 @@
 - hosts: all
   connection: local
   roles:
-    - role: delete_interfaces
+    - role: base/delete_interfaces
       tags: delete_interfaces

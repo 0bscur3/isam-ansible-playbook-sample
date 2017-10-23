@@ -16,5 +16,5 @@
 - hosts: all
   connection: local
   roles:
-    - role: add_interfaces
+    - role: base/add_interfaces
       tags: add_interfaces
