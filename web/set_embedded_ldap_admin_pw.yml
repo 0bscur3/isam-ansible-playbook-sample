@@ -4,5 +4,5 @@
 - hosts: all
   connection: local
   roles:
-    - role: set_ldap_user_pw
-      tags: set_ldap_user_pw
+    - role: web/set_embedded_ldap_admin_pw
+      tags: set_embedded_ldap_admin_pw

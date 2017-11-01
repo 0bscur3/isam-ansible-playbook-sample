@@ -1,0 +1,15 @@
+---
+# Load
+#   load signer certificates into certificate store
+#   Example:
+#      iterator:
+#         -   kdb_id: pdsrv
+#             label:  local runtime
+#             server: localhost
+#             port:   443
+- hosts: all
+  connection: local
+  roles:
+    - role: base/playbook
+      tags: playbook
+      

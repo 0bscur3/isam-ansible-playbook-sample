@@ -14,5 +14,5 @@
 - hosts: all
   connection: local
   roles:
-    - role: config_policyserver
-      tags: config_policyserver
+    - role: web/configure_policyserver
+      tags: configure_policyserver
