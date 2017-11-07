@@ -11,7 +11,7 @@
 #       admin_cert_lifetime:    1460
 #       ssl_compliance:         "none"
 #       ...     <- additional parameters
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: web/configure_policyserver

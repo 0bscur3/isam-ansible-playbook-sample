@@ -6,7 +6,7 @@
 #         -   instance_id:    default
 #             filename:       "{{ inventory_dir }}/uploads/management_root/management/C/example.html"
 #             target:         "management/C/example.html"
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: web/upload_management_root_files

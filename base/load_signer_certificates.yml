@@ -7,7 +7,7 @@
 #             label:  local runtime
 #             server: localhost
 #             port:   443
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: base/load_signer_certificates

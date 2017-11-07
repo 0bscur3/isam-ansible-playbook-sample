@@ -1,13 +1,9 @@
 ---
-# Load
-#   load signer certificates into certificate store
+# Task
+#   description
 #   Example:
 #      iterator:
-#         -   kdb_id: pdsrv
-#             label:  local runtime
-#             server: localhost
-#             port:   443
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: base/playbook

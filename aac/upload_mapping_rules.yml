@@ -6,7 +6,7 @@
 #       -   name: mapping_rule_1
 #           upload_filename: "uploads/mapping_rules/<file-name>.js"
 #           category:   InfoMap
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: aac/upload_mapping_rules

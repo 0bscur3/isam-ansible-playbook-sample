@@ -6,7 +6,7 @@
 #         -   kdb_id: "{{ item.kdb_id }}"
 #             cert: "{{ inventory_dir }}/{{ item.cert  }}"
 #             label: "{{ item.label }}"
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: base/upload_signer_certificates

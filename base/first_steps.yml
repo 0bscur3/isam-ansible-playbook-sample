@@ -4,7 +4,7 @@
 #     set up LMI FIPS (may restart appliance)
 #     change password
 #     commit and restart LMI
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: base/first_steps

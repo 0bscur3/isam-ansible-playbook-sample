@@ -12,7 +12,7 @@
 #             value: ""
 #           - key: infoMap.JSRule
 #             value: MappingRule1
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: aac/create_authentication_mechanisms

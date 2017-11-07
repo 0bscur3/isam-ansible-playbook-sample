@@ -6,7 +6,7 @@
 #      password:   "{{ item.password }}"
 #      filename:   "{{ inventory_dir }}/{{ item.filename }}"
 ---
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: base/extract_certificates

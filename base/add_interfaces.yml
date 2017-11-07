@@ -13,7 +13,7 @@
 #                     maskOrPrefix:       "24"
 #                     allowManagement:    false
 #                     enabled:            true
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: base/add_interfaces

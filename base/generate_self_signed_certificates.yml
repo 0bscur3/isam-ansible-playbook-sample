@@ -8,7 +8,7 @@
 #      default:    "{{ item.default }}"
 #      size:       "{{ item.size }}"
 ---
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: base/generate_self_signed_certificates

@@ -15,7 +15,7 @@
 #          https_port:         443
 #          nw_interface_yn:    'yes'
 #          ip_address:         "{{ interfaces[0].addresses[1].address }}"
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: web/create_reverseproxy_instances

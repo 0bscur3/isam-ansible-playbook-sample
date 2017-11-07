@@ -5,7 +5,7 @@
 #      activation_keys:
 #        - id: wga
 #          code: "AAAA-BBBB-CCCC-DDDD-EEEE"
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: base/activate_modules

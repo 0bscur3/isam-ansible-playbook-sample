@@ -6,7 +6,7 @@
 #       -   inst_name: default
 #           entries:
 #               - { method: set, stanza: server, entry_name: server-name, value: default }
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: web/configure_reverseproxy_instances

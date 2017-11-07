@@ -5,7 +5,7 @@
 #      cert_id:    "{{ item.cert_id }}"
 #      filename:   "{{ inventory_dir }}/{{ item.filename }}"
 ---
-- hosts: all
+- hosts: "{{ hosts | default('all')}}"
   connection: local
   roles:
     - role: base/export_certificates
