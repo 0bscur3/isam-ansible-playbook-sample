@@ -1,0 +1,7 @@
+---
+# playbook to export all application logs
+- hosts: "{{ hosts | default('all') }}"
+  connection: local
+  roles:
+    - role: export_application_logs
+      tags: export_application_logs
